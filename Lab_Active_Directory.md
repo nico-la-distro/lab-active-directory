@@ -315,7 +315,7 @@ gpupdate /force
 
 ![[WIN10 wallpaper minecraft.png.png]]
 
-![](Screenshots/WIN10-wallpaper-minecraft.png.png)
+![](Screenshots/WIN-10-wallpaper-minecraft.png.png)
 
 _PS : Le wallpaper vient du jeu Hytale et non Minecraft_
 
