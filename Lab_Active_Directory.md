@@ -24,6 +24,8 @@ Créer un environnement Active Directory fonctionnel pour comprendre :
 
 ![[AD-DC-Specs.png]]
 
+![](Screenshots/AD-DC-Specs.png)
+
 ### Décisions d'installation
 
 - Datacenter Desktop Experience choisi pour interface graphique + fonctionnalités AD  
