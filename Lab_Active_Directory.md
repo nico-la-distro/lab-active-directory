@@ -454,7 +454,7 @@ User Configuration > Policies > Administrative Templates > Control Panel
 
 ### Ce que j'ai appris
 
-Ce projet m’a permis de mettre en pratique la gestion d’un environnement Active Directory et d’appliquer des premières mesures de sécurisation.
+Ce projet m’a permis de mettre en pratique la gestion d’un environnement Active Directory et d’appliquer des premières mesures de sécurité.
 
 ---
 ## Suite logique
