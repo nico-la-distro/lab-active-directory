@@ -22,8 +22,6 @@ Créer un environnement Active Directory fonctionnel pour comprendre :
 ## Création VM Windows Server 2022
 ### Specs
 
-![[AD-DC-Specs.png]]
-
 ![](Screenshots/AD-DC-Specs.png)
 
 ### Décisions d'installation
@@ -42,8 +40,6 @@ Créer un environnement Active Directory fonctionnel pour comprendre :
 ## Configuration réseau Windows server 2022
 
 Settings -> Network -> Ethernet -> IP settings : Manual
-
-![[AD-DC-IP-settings.png]]
 
 ![](Screenshots/AD-DC-IP-settings.png)
 
@@ -70,8 +66,6 @@ Server manager -> Manage -> Add Roles and Features -> Active Directory Domain Se
 
 **Root domain name**
 
-![[AD-DC-Root-domain.png]]
-
 ![](Screenshots/AD-DC-Root-domain.png)
 
 ### Domain Controller Options
@@ -81,8 +75,6 @@ mot de passe DSRM défini ✅
 ### DNS Options
 
 ⚠️**Warning⚠️**
-
-![[AD-DC-DNS-Options.png]]
 
 ![](Screenshots/AD-DC-DNS-Options.png)
 
@@ -111,12 +103,7 @@ mot de passe DSRM défini ✅
 |NetBIOS|`LAB`|
 |Mot de passe DSRM|Défini|
 
-![[AD-DC-Dashboard-after-install.png]]
-
 ![](Screenshots/AD-DC-Dashboard-after-install.png)
-
-
-![[AD-DC-whoami.png]]
 
 ![](Screenshots/AD-DC-whoami.png)
 
@@ -132,8 +119,6 @@ mot de passe DSRM défini ✅
 - Server manager -> Tools -> Active Directory Users and Computers
 - lab.local/Users -> New -> User
 
-![[AD-DC-testuser.png]]
-
 ![](Screenshots/AD-DC-testuser.png)
 
 **Résultat** : L’utilisateur est créé dans Active Directory et peut se connecter sur n’importe quelle machine du domaine
@@ -142,8 +127,6 @@ mot de passe DSRM défini ✅
 
 ## Création VM Windows 10 Pro
 ### Specs
-
-![[WIN10 Specs.png]]
 
 ![](Screenshots/WIN-10-Specs.png)
 
@@ -174,8 +157,6 @@ mot de passe DSRM défini ✅
 ---
 ## Configuration réseau Windows 10 Pro
 
-![[WIN 10 IP settings.png]]
-
 ![](Screenshots/WIN-10-IP-settings.png)
 
 ping vers 192.168.37.100✅
@@ -186,19 +167,13 @@ ping vers lab.local ✅
 
 Settings -> About -> Rename This PC (Advanced) -> Change
 
-![[WIN 10 into lab.local.png]]
-
 ![](Screenshots/WIN-10-into-lab.local.png)
 
 **Vérification dans AD**
 
-![[WIN 10 dans AD.png]]
-
 ![](Screenshots/WIN-10-dans-AD.png)
 
 **Login test user sur WIN-10**
-
-![[test user sur WIN-10.png]]
 
 ![](Screenshots/test-user-sur-WIN-10.png)
 
@@ -213,15 +188,9 @@ Création d’Unités d’Organisation (OU) et déplacement des objets dans les 
 - OU_Computers  
 - OU_IT  
 
-![[AD-DC-OUs-Creates.png]]
-
 ![](Screenshots/AD-DC-OUs-Creates.png)
 
-![[AD-DC-test-user-dans-OU_Users.png]]
-
 ![](Screenshots/AD-DC-test-user-dans-OU_Users.png)
-
-![[AD-DC-WIN-10-dans-OU_Computers.png]]
 
 ![](Screenshots/AD-DC-WIN-10-dans-OU_Computers.png)
 
@@ -241,17 +210,11 @@ Remarque :
 
 Server Manager → Tools → Group Policy Management -> Forest → Domains → lab.local
 
-![[AD-DC-create-a-GPO.png]]
-
 ![](Screenshots/AD-DC-create-a-GPO.png)
-
-![[AD-DC-edit-GPO.png]]
 
 ![](Screenshots/AD-DC-edit-GPO.png)
 
 Clic droit sur `GPO_Wallpaper` → **Edit**
-
-![[AD-DC-GPO-editor-Desktop-Wallpaper.png]]
 
 ![](Screenshots/AD-DC-GPO-editor-Desktop-Wallpaper.png)
 
@@ -261,8 +224,6 @@ Clic droit sur `GPO_Wallpaper` → **Edit**
 - OK
 
 ### Rendre le wallpaper accessible
-
-![[AD-DC-share-wallpapers.png]]
 
 ![](Screenshots/AD-DC-share-wallpapers.png)
 
@@ -288,14 +249,10 @@ gpudate \force
 
 **-> Incompatibilité entre le type de GPO (User Configuration) et l’OU cible (Computers Configuration)**
 
-![[AD-DC-Troubleshooting-GPO.png]]
-
 ![](Screenshots/AD-DC-Troubleshooting-GPO.png)
 
 - Delete link OU_Computers
 - OU_Users -> Link an Existing GPO... -> GPO_Wallpaper
-
-![[AD-DC-Link-an-Existing-GPO.png]]
 
 ![](Screenshots/AD-DC-Link-an-Existing-GPO.png)
 
@@ -313,8 +270,6 @@ gpupdate /force
 ```
 - Logout / Login
 
-![[WIN10 wallpaper minecraft.png.png]]
-
 ![](Screenshots/WIN-10-wallpaper-minecraft.png.png)
 
 _PS : Le wallpaper vient du jeu Hytale et non Minecraft_
@@ -324,8 +279,6 @@ _PS : Le wallpaper vient du jeu Hytale et non Minecraft_
 
 - OU_IT -> Right click -> New -> Group
 - Création de IT_Admins & Users_Basic
-
-![[AD Groups IT_Admins & Users_Basic.png]]
 
 ![](Screenshots/AD-Groups-IT_Admins-&-Users_Basic.png)
 
@@ -360,23 +313,17 @@ Principe :
 
 Création de C:\Partage -> Properties -> Sharing -> Advanced Sharing -> Share this folder -> Permissions -> Remove Everyone -> Add Users_Basic / Read only -> Apply
 
-![[AD-gestion-des-accès-sur-Partage-Sharing.png]]
-
 ![](Screenshots/AD-gestion-des-accès-sur-Partage-Sharing.png)
 
 ### Permissions NTFS
 
 C:\Partage -> Properties -> Security -> Edit... -> Add Users_Basic -> Read / List folder contents / Read & execute -> Apply
 
-![[AD-gestion-des-accès-sur-Partage-Security.png]]
-
 ![](Screenshots/AD-gestion-des-accès-sur-Partage-Security.png)
 
 ### Ajout de testuser dans Users_Basic
 
 OU_Users -> Right click on test user -> Add to a Group -> Users_Basic
-
-![[AD-add-test-user-to-Users_Basic.png]]
 
 ![](Screenshots/AD-add-test-user-to-Users_Basic.png)
 
@@ -405,8 +352,6 @@ gpupdate /force
 
 Logout / Login
 
-![[WIN 10 test du dossier Partage.png]]
-
 ![](Screenshots/WIN-10-test-du-dossier-Partage.png)
 
 **Accès autorisé** ✅
@@ -421,8 +366,6 @@ Forest > Domains > lab.local > Right click on Default Domain Policy > Edit
 **Group Poicy Management Editor :**
 
 Computer Configuration > Policies > Windows Settings > Security Settings > Account Policies > Password Policy
-
-![[AD Group Policy Management Editor - Password Policy.png]]
 
 ![](Screenshots/AD-Group-Policy-Management-Editor-Password-Policy.png)
 
@@ -439,8 +382,6 @@ MDP : test1234
 - 8 caractères ✅
 - Complexité ❌
 
-![[WIN 10 mdp test1234.png]]
-
 ![](Screenshots/WIN-10-mdp-test1234.png)
 
 MDP : p@$W0rd
@@ -455,8 +396,6 @@ MDP : p@sSv3RYs3CuR&
 - 8 caractères ✅
 - Complexité ✅
 
-![[Win 10 mdp changed.png]]
-
 ![](Screenshots/Win-10-mdp-changed.png)
 
 ---
@@ -465,8 +404,6 @@ MDP : p@sSv3RYs3CuR&
 **Group Policy Management**
 
 Forest > Domains > lab.local > Right click OU_Users "Create GPO in this domain, link it here"
-
-![[AD GPO_Restrictions.png]]
 
 ![](Screenshots/AD-GPO_Restrictions.png)
 
@@ -480,15 +417,11 @@ Right click on GPO_Restrictions > Edit > GP management editor
 
 User Configuration > Policies > Administrative Templates > System
 
-![[AD prevent access to the command prompt.png]]
-
 ![](Screenshots/AD-prevent-access-to-the-command-prompt.png)
 
 ### Blocage panneau de configuration
 
 User Configuration > Policies > Administrative Templates > Control Panel
-
-![[AD prohibit access to control panel.png]]
 
 ![](Screenshots/AD-prohibit-access-to-control-panel.png)
 
@@ -496,13 +429,9 @@ User Configuration > Policies > Administrative Templates > Control Panel
 
 **CMD**
 
-![[WIN 10 cmd disabled.png]]
-
 ![](Screenshots/WIN-10-cmd-disabled.png)
 
 **Control Panel**
-
-![[WIN 10 control panel disabled.png]]
 
 ![](Screenshots/WIN-10-control-panel-disabled.png)
 
