@@ -45,7 +45,7 @@ Settings -> Network -> Ethernet -> IP settings : Manual
 
 ![[AD-DC-IP-settings.png]]
 
-![](AD-DC-IP-settings.png)
+![](Screenshots/AD-DC-IP-settings.png)
 
 ping vers DNS 192.168.37.100✅
 ping vers Gateway 192.168.37.2 ✅
@@ -72,7 +72,7 @@ Server manager -> Manage -> Add Roles and Features -> Active Directory Domain Se
 
 ![[AD-DC-Root-domain.png]]
 
-![](AD-DC-Root-domain.png)
+![](Screenshots/AD-DC-Root-domain.png)
 
 ### Domain Controller Options
 
@@ -84,7 +84,7 @@ mot de passe DSRM défini ✅
 
 ![[AD-DC-DNS-Options.png]]
 
-![](AD-DC-DNS-Options.png)
+![](Screenshots/AD-DC-DNS-Options.png)
 
 |Warning DNS|Action|
 |---|---|
@@ -113,12 +113,12 @@ mot de passe DSRM défini ✅
 
 ![[AD-DC-Dashboard-after-install.png]]
 
-![](AD-DC-Dashboard-after-install.png)
+![](Screenshots/AD-DC-Dashboard-after-install.png)
 
 
 ![[AD-DC-whoami.png]]
 
-![](AD-DC-whoami.png)
+![](Screenshots/AD-DC-whoami.png)
 
 ---
 ## Màj et Redémarrage DC
@@ -134,7 +134,7 @@ mot de passe DSRM défini ✅
 
 ![[AD-DC-testuser.png]]
 
-![](AD-DC-testuser.png)
+![](Screenshots/AD-DC-testuser.png)
 
 **Résultat** : L’utilisateur est créé dans Active Directory et peut se connecter sur n’importe quelle machine du domaine
 
@@ -145,7 +145,7 @@ mot de passe DSRM défini ✅
 
 ![[WIN10 Specs.png]]
 
-![](WIN10 Specs.png)
+![](Screenshots/WIN10-Specs.png)
 
 ### Décisions d'installation
 
@@ -176,7 +176,7 @@ mot de passe DSRM défini ✅
 
 ![[WIN 10 IP settings.png]]
 
-![](WIN 10 IP settings.png)
+![](Screenshots/WIN-10-IP-settings.png)
 
 ping vers 192.168.37.100✅
 ping vers lab.local ✅
@@ -188,19 +188,19 @@ Settings -> About -> Rename This PC (Advanced) -> Change
 
 ![[WIN 10 into lab.local.png]]
 
-![](WIN 10 into lab.local.png)
+![](Screenshots/WIN-10-into-lab.local.png)
 
 **Vérification dans AD**
 
 ![[WIN 10 dans AD.png]]
 
-![](WIN 10 dans AD.png)
+![](Screenshots/WIN-10-dans-AD.png)
 
 **Login test user sur WIN-10**
 
 ![[test user sur WIN-10.png]]
 
-![](test user sur WIN-10.png)
+![](Screenshots/test-user-sur-WIN-10.png)
 
 ---
 ## Organisation Active Directory (OU + Groupes)
@@ -215,15 +215,15 @@ Création d’Unités d’Organisation (OU) et déplacement des objets dans les 
 
 ![[AD-DC-OUs-Creates.png]]
 
-![](AD-DC-OUs-Creates.png)
+![](Screenshots/AD-DC-OUs-Creates.png)
 
 ![[AD-DC-test-user-dans-OU_Users.png]]
 
-![](AD-DC-test-user-dans-OU_Users.png)
+![](Screenshots/AD-DC-test-user-dans-OU_Users.png)
 
 ![[AD-DC-WIN-10-dans-OU_Computers.png]]
 
-![](AD-DC-WIN-10-dans-OU_Computers.png)
+![](Screenshots/AD-DC-WIN-10-dans-OU_Computers.png)
 
 Objectif :  
 - Structurer le domaine  
@@ -243,17 +243,17 @@ Server Manager → Tools → Group Policy Management -> Forest → Domains → l
 
 ![[AD-DC-create-a-GPO.png]]
 
-![](AD-DC-create-a-GPO.png)
+![](Screenshots/AD-DC-create-a-GPO.png)
 
 ![[AD-DC-edit-GPO.png]]
 
-![](AD-DC-edit-GPO.png)
+![](Screenshots/AD-DC-edit-GPO.png)
 
 Clic droit sur `GPO_Wallpaper` → **Edit**
 
 ![[AD-DC-GPO-editor-Desktop-Wallpaper.png]]
 
-![](AD-DC-GPO-editor-Desktop-Wallpaper.png)
+![](Screenshots/AD-DC-GPO-editor-Desktop-Wallpaper.png)
 
 - **Enabled**
 - Wallpaper path : chemin temporaire
@@ -264,7 +264,7 @@ Clic droit sur `GPO_Wallpaper` → **Edit**
 
 ![[AD-DC-share-wallpapers.png]]
 
-![](AD-DC-share-wallpapers.png)
+![](Screenshots/AD-DC-share-wallpapers.png)
 
 - Création dossier C:\Wallpapers
 - Clic droit dossier → **Properties → Sharing → Advanced Sharing**
@@ -290,14 +290,14 @@ gpudate \force
 
 ![[AD-DC-Troubleshooting-GPO.png]]
 
-![](AD-DC-Troubleshooting-GPO.png)
+![](Screenshots/AD-DC-Troubleshooting-GPO.png)
 
 - Delete link OU_Computers
 - OU_Users -> Link an Existing GPO... -> GPO_Wallpaper
 
 ![[AD-DC-Link-an-Existing-GPO.png]]
 
-![](AD-DC-Link-an-Existing-GPO.png)
+![](Screenshots/AD-DC-Link-an-Existing-GPO.png)
 
 ```cmd
 gpupdate /force
@@ -315,7 +315,7 @@ gpupdate /force
 
 ![[WIN10 wallpaper minecraft.png.png]]
 
-![](WIN10-wallpaper-minecraft.png.png)
+![](Screenshots/WIN10-wallpaper-minecraft.png.png)
 
 _PS : Le wallpaper vient du jeu Hytale et non Minecraft_
 
@@ -327,7 +327,7 @@ _PS : Le wallpaper vient du jeu Hytale et non Minecraft_
 
 ![[AD Groups IT_Admins & Users_Basic.png]]
 
-![](AD-Groups-IT_Admins-&-Users_Basic.png)
+![](Screenshots/AD-Groups-IT_Admins-&-Users_Basic.png)
 
 ### Group Scope
 
@@ -362,7 +362,7 @@ Création de C:\Partage -> Properties -> Sharing -> Advanced Sharing -> Share th
 
 ![[AD-gestion-des-accès-sur-Partage-Sharing.png]]
 
-![](AD-gestion-des-accès-sur-Partage-Sharing.png)
+![](Screenshots/AD-gestion-des-accès-sur-Partage-Sharing.png)
 
 ### Permissions NTFS
 
@@ -370,7 +370,7 @@ C:\Partage -> Properties -> Security -> Edit... -> Add Users_Basic -> Read / Lis
 
 ![[AD-gestion-des-accès-sur-Partage-Security.png]]
 
-![](AD-gestion-des-accès-sur-Partage-Security.png)
+![](Screenshots/AD-gestion-des-accès-sur-Partage-Security.png)
 
 ### Ajout de testuser dans Users_Basic
 
@@ -378,7 +378,7 @@ OU_Users -> Right click on test user -> Add to a Group -> Users_Basic
 
 ![[AD-add-test-user-to-Users_Basic.png]]
 
-![](AD-add-test-user-to-Users_Basic.png)
+![](Screenshots/AD-add-test-user-to-Users_Basic.png)
 
 ### Ordre des permissions Windows  
   
@@ -407,7 +407,7 @@ Logout / Login
 
 ![[WIN 10 test du dossier Partage.png]]
 
-![](WIN-10-test-du-dossier-Partage.png)
+![](Screenshots/WIN-10-test-du-dossier-Partage.png)
 
 **Accès autorisé** ✅
 
@@ -424,7 +424,7 @@ Computer Configuration > Policies > Windows Settings > Security Settings > Accou
 
 ![[AD Group Policy Management Editor - Password Policy.png]]
 
-![](AD-Group-Policy-Management-Editor-Password-Policy.png)
+![](Screenshots/AD-Group-Policy-Management-Editor-Password-Policy.png)
 
 - longueur minimale : 8 caractères  
 - complexité activée  
@@ -441,7 +441,7 @@ MDP : test1234
 
 ![[WIN 10 mdp test1234.png]]
 
-![](WIN-10-mdp-test1234.png)
+![](Screenshots/WIN-10-mdp-test1234.png)
 
 MDP : p@$W0rd
 
@@ -457,7 +457,7 @@ MDP : p@sSv3RYs3CuR&
 
 ![[Win 10 mdp changed.png]]
 
-![](Win-10-mdp-changed.png)
+![](Screenshots/Win-10-mdp-changed.png)
 
 ---
 ## GPO de restriction (cmd, panneau de configuration...)
@@ -468,7 +468,7 @@ Forest > Domains > lab.local > Right click OU_Users "Create GPO in this domain, 
 
 ![[AD GPO_Restrictions.png]]
 
-![](AD-GPO_Restrictions.png)
+![](Screenshots/AD-GPO_Restrictions.png)
 
 OU_Users : Cible les utilisateurs
 
@@ -482,7 +482,7 @@ User Configuration > Policies > Administrative Templates > System
 
 ![[AD prevent access to the command prompt.png]]
 
-![](AD-prevent-access-to-the-command-prompt.png)
+![](Screenshots/AD-prevent-access-to-the-command-prompt.png)
 
 ### Blocage panneau de configuration
 
@@ -490,7 +490,7 @@ User Configuration > Policies > Administrative Templates > Control Panel
 
 ![[AD prohibit access to control panel.png]]
 
-![](AD-prohibit-access-to-control-panel.png)
+![](Screenshots/AD-prohibit-access-to-control-panel.png)
 
 ### Test du GPO sur testuser
 
@@ -498,13 +498,13 @@ User Configuration > Policies > Administrative Templates > Control Panel
 
 ![[WIN 10 cmd disabled.png]]
 
-![](WIN-10-cmd-disabled.png)
+![](Screenshots/WIN-10-cmd-disabled.png)
 
 **Control Panel**
 
 ![[WIN 10 control panel disabled.png]]
 
-![](WIN-10-control-panel-disabled.png)
+![](Screenshots/WIN-10-control-panel-disabled.png)
 
 ---
 ## Conclusion
