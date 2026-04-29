@@ -145,7 +145,7 @@ mot de passe DSRM défini ✅
 
 ![[WIN10 Specs.png]]
 
-![](Screenshots/WIN10-Specs.png)
+![](Screenshots/WIN-10-Specs.png)
 
 ### Décisions d'installation
 
